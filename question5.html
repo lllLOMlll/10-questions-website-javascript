@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Question 5</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div class="navbar">
+		<a href="index.html">Home</a>
+		<a href="question1.html">Question 1</a>
+		<a href="question2.html">Question 2</a>
+		<a href="question3.html">Question 3</a>
+		<a href="question4.html">Question 4</a>
+		<a href="question5.html"><span class="highlight-green">Question 5</span></a>
+		<a href="question6.html">Question 6</a>
+		<a href="question7.html">Question 7</a>
+		<a href="question8.html">Question 8</a>
+		<a href="question9.html">Question 9</a>
+		<a href="question10.html">Question 10</a>
+	</div>
+
+	<!-- Title -->
+	<h1>Question 5</h1>
+	<h2>Word Sorting</h2>
+
+		<br>
+		<br>
+
+		<!-- Image -->
+		<img src="media/computer.png" alt="This is a computer">
+
+		<h3><a href="question6.html">Next question</a></h3>
+
+			<!-- Javascript -->
+			<pre> 
+				<script>
+
+					var input = prompt("Enter a list of words separated by commas");
+
+				// Split the input into an array of words
+					var words = input.split(",");
+
+				// Validate and filter the words
+					var validWords = [];
+					for (var i = 0; i < words.length; i++) {
+						var word = words[i].trim();
+						if (/^[A-Za-z]+$/.test(word)) {  // +: This is a quantifier that means "one or more". It's referring to the character class directly before it. This means that the pattern [A-Za-z]+ matches one or more uppercase or lowercase letters.
+							validWords.push(word);
+						}
+					}
+
+
+					// Sort the trimmed words in alphabetical order
+					validWords.sort();
+
+					// Display the sorted list of words
+					alert("Words by alphabetical order: " + validWordsa.join(", "));
+
+
+				</script>
+			</pre>
+		</body>
+		</html>

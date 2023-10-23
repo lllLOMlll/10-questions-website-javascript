@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Question 3</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div class="navbar">
+		<a href="index.html">Home</a>
+		<a href="question1.html">Question 1</a>
+		<a href="question2.html">Question 2</a>
+		<a href="question3.html"><span class="highlight-green">Question 3</span></a>
+		<a href="question4.html">Question 4</a>
+		<a href="question5.html">Question 5</a>
+		<a href="question6.html">Question 6</a>
+		<a href="question7.html">Question 7</a>
+		<a href="question8.html">Question 8</a>
+		<a href="question9.html">Question 9</a>
+		<a href="question10.html">Question 10</a>
+	</div>
+
+	<!-- Title -->
+	<h1>Question 3</h1>
+	<h2>Number Sorting</h2>
+
+		<br>
+		<br>
+
+		<!-- Image -->
+		<img src="media/computer.png" alt="This is a computer">
+
+		<h3><a href="question4.html">Next question</a></h3>
+
+			<!-- Javascript -->
+			<pre> 
+				<script>
+					var howManyNumbers = prompt("How many numbers do you want to sort?");
+					var arrayToSort = [];
+
+					// Starting a loop to ask and get 'n' numbers
+					for (i = 1; i <= howManyNumbers; i++) {
+						var num = prompt("Enter number " + i);
+
+  						// Validate if the entered value is a number
+						while (isNaN(num)) {
+							num = prompt("Invalid input. Enter number " + i);
+						}
+
+						arrayToSort.push(num);
+					}
+
+					// Sorting the numbers
+					var arraySorted = [...arrayToSort].sort(function(a, b) {
+						return a - b;
+					});
+
+					// Displaying the numbers
+					alert(
+						"Your numbers were\n" +
+						arrayToSort.join("  ") +
+						"\n\nYour numbers in ascending order:\n" +
+						arraySorted.join("  ")
+						);
+
+
+
+					</script>
+				</pre>
+			</body>
+			</html>

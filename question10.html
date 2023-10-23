@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Question 10</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div class="navbar">
+		<a href="index.html">Home</a>
+		<a href="question1.html">Question 1</a>
+		<a href="question2.html">Question 2</a>
+		<a href="question3.html">Question 3</a>
+		<a href="question4.html">Question 4</a>
+		<a href="question5.html">Question 5</a>
+		<a href="question6.html">Question 6</a>
+		<a href="question7.html">Question 7</a>
+		<a href="question8.html">Question 8</a>
+		<a href="question9.html">Question 9</a>
+		<a href="question10.html"><span class="highlight-green">Question 10</span></a>
+	</div>
+
+	<!-- Title -->
+	<h1>>Question 9</h1>
+	<h2>Computer Slang</h2>
+
+	<br>
+	<br>
+
+	<!-- Image -->
+	<img src="media/computer.png" alt="This is a computer">
+
+	<h3><a href="index.html">Return home</a></h3>
+
+	<!-- Javascript -->
+	<pre> 
+		<script>
+			function convertToComputerSlang() {
+    			// Prompt the user to enter a word or phrase
+				var phrase = prompt("Please enter a word or phrase");
+
+   				// Initialize result string
+				var result = '';
+
+    			// Iterate over each character in the phrase
+				for (var i = 0; i < phrase.length; i++) {
+       				 // If the character is a vowel and it's not the first character, skip it
+					if ('aeiouAEIOU'.includes(phrase[i]) && i !== 0) {
+						continue; // Not adding the voyel if it's not the firt character of the word
+					}
+
+       				// If the character is a space, replace it with an underscore
+					if (phrase[i] === ' ') {
+						result += '_';
+					} else {
+          			// Otherwise, add the character to the result string
+						result += phrase[i];
+					}
+					// End of the loop
+				}
+
+  				  // Capitalize all letters 
+				result = result.toUpperCase();
+
+  				  // Display the resulting computer slang
+				alert("The resulting computer slang is: \n" + result);
+			}
+
+			// Calling the function
+			convertToComputerSlang();
+
+		</script>
+	</pre>
+</body>
+</html>

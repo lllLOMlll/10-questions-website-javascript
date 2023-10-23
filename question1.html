@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Question 1</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div class="navbar">
+		<a href="index.html">Home</a>
+		<a href="question6.html"><span class="highlight-green">Question 1</span></a>
+		<a href="question2.html">Question 2</a>
+		<a href="question3.html">Question 3</a>
+		<a href="question4.html">Question 4</a>
+		<a href="question5.html">Question 5</a>
+		<a href="question6.html">Question 6</a>
+		<a href="question7.html">Question 7</a>
+		<a href="question8.html">Question 8</a>
+		<a href="question9.html">Question 9</a>
+		<a href="question10.html">Question 10</a>
+	</div>
+
+	<!-- Title -->
+	<h1>Question 1</h1>
+	<h2>Leap Year Checker</h2>
+
+		<br>
+		<br>
+
+		<!-- Image -->
+		<img src="media/computer.png" alt="This is a computer">
+
+		<h3><a href="question2.html">Next question</a></h3>
+
+			<!-- Button to trigger the JavaScript code -->
+	<button id="check-button">Check Leap Year</button>
+
+			<!-- Javascript -->
+			<pre> 
+				<script>
+					var year = prompt("Please enter a year?\n(and the program will tell you if it's a leap year or not)", "Year");
+					// isNaN Not a Number
+					if (isNaN(year)) {
+						alert("You did not enter a number");
+					// Check for negative number
+					} else if (year < 0) {
+						alert("A year cannot be negative")
+					} else {
+					// CONDITIONS for a leap year
+					// Leap year is divisible by 4 : year % 4 == 0
+					// Leap year is NOT divisible by 100 : year % 100 != 0
+					// Leap year is divisible by 400 : year % 400 == 0
+						if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
+							alert(year + " is a leap year");
+						} else {
+							alert(year + " is NOT a leap year")
+						}
+					}
+
+
+
+
+
+				</script>
+			</pre>
+		</body>
+		</html>

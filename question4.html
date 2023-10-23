@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Question 4</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div class="navbar">
+		<a href="index.html">Home</a>
+		<a href="question1.html">Question 1</a>
+		<a href="question2.html">Question 2</a>
+		<a href="question3.html">Question 3</a>
+		<a href="question4.html"><span class="highlight-green">Question 4</span></a>
+		<a href="question5.html">Question 5</a>
+		<a href="question6.html">Question 6</a>
+		<a href="question7.html">Question 7</a>
+		<a href="question8.html">Question 8</a>
+		<a href="question9.html">Question 9</a>
+		<a href="question10.html">Question 10</a>
+	</div>
+
+	<!-- Title -->
+	<h1>Question 4</h1>
+	<h2>Password Verification</h2>
+
+		<br>
+		<br>
+
+		<!-- Image -->
+		<img src="media/computer.png" alt="This is a computer">
+
+		<h3><a href="question5.html">Next question</a></h3>
+
+			<!-- Javascript -->
+			<pre> 
+				<script>
+		// ****************** CREATING THE PASSWORD *****************************
+		// Creating an exit variable to exit the loop
+					var exit = false;
+
+		// Start the first while loop
+		do {
+			var password = prompt(
+				"Create a password" +
+				"\n\nYour password must contain at least 8 characters" +
+				"\nYour password must contain at least 1 special character (!@#$%^&*)" +
+				"\nYour password must contain at least 1 uppercase letter"
+				);
+
+		  // Regular expressions to match the required patterns
+		  var lengthRegularExpression = /.{8,}/; // At least 8 characters
+		  var specialCharRegularExpression = /[!@#$%^&*]/; // Special characters
+		  var uppercaseRegularExpression = /[A-Z]/; // Uppercase
+
+		  // Verify if the conditions are met
+		  var isValidPassword =
+		  lengthRegularExpression.test(password) &&
+		  specialCharRegularExpression.test(password) &&
+		  uppercaseRegularExpression.test(password);
+
+		  // Display the result
+		  if (isValidPassword) {
+		  	alert("Password is valid.");
+		  	exit = true;
+		  } else {
+		  	alert("Password does not meet the requirements.");
+		  }
+		} while (!exit);
+
+		// ****************** TESTING THE PASSWORD *****************************
+
+		// Variable count to keep track of the number of tries.
+		var count = 0;
+		var tries = 3
+		var correctPassword = false;
+
+		while (count < 3) {
+			count++;
+			tries--;
+			var enterPassword = prompt("Enter your password");
+			if (enterPassword === password) {
+				correctPassword = true; // For the last alert
+				alert("Welcome!");
+				break;
+			} else {
+				alert("Wrong password, try again!\n Attempt(s) left:" + tries);
+			}
+		}
+
+		if (!correctPassword) {
+			alert("Your account has been blocked. Please contact us at 555-555-5555");
+		}
+
+
+
+	</script>
+</pre>
+</body>
+</html>

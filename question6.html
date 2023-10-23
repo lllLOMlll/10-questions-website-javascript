@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Question 6</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div class="navbar">
+		<a href="index.html">Home</a>
+		<a href="question1.html">Question 1</a>
+		<a href="question2.html">Question 2</a>
+		<a href="question3.html">Question 3</a>
+		<a href="question4.html">Question 4</a>
+		<a href="question5.html">Question 5</a>
+		<a href="question6.html"><span class="highlight-green">Question 6</span></a>
+		<a href="question7.html">Question 7</a>
+		<a href="question8.html">Question 8</a>
+		<a href="question9.html">Question 9</a>
+		<a href="question10.html">Question 10</a>
+	</div>
+
+	<!-- Title -->
+	<h1>Question 6</h1>
+	<h2>Scrabble Score Calculator</h2>
+
+		<br>
+		<br>
+
+		<!-- Image -->
+		<img src="media/computer.png" alt="This is a computer">
+
+		<h3><a href="question7.html">Next question</a></h3>
+
+			<!-- Javascript -->
+			<pre> 
+				<script>
+					var exit = false;
+					// Javascript object. Each letter is associated with a value 
+					var scoreForEachLetter = { 
+						//Source : https://hasbro-new.custhelp.com/app/answers/detail/a_id/55/~/what-is-the-total-face-value-of-all-the-scrabble-tiles%3F#:~:text=1%20point%20%2D%20A%2C%20E%2C,H%2C%20V%2C%20W%2C%20Y
+						"a": 1, "e": 1, "i": 1, "o": 1, "u": 1, "l": 1, "n": 1, "s": 1, "t": 1, "r": 1, 
+						"d": 2, "g": 2,
+						"b": 3, "c": 3, "m": 3, "p": 3,
+						"f": 4, "h": 4, "v": 4, "w": 4, "y": 4,
+						"k": 5,
+						"j": 8, "x": 8,
+						"q": 10, "z": 10
+					};
+
+					do {
+						var word = prompt("Please enter a word");
+
+			        // Validation
+			        var lettersRegularExpression = /^[A-Za-z]+$/; // Letters
+			        var digitRegularExpression = /\d/; // At least one digit
+			        var specialCharacterRegularExpression = /[^A-Za-z0-9]/; // Special characters (white space included)
+
+			        // Verify if the conditions are met
+			        var isValidWord = lettersRegularExpression.test(word) && !digitRegularExpression.test(word) && !specialCharacterRegularExpression.test(word);
+			        
+			        if (isValidWord) {
+			        	// Initializing the score to 0
+			        	var score = 0;
+			        	for(var i = 0; i < word.length; i++){
+			                var letter = word[i].toLowerCase(); // Convert to lower case for comparison
+			                score += scoreForEachLetter[letter]; // Add the score of the current letter
+			            }
+			            alert(word + " is a valid word\n\nScrabble score : " + score);
+			            exit = true;
+			        // If the "isValidWord" is false    
+			        } else {
+			        	alert(word + " is not a valid word. Please enter a valid word.")
+			        }
+			    } while (!exit)
+
+
+
+</script>
+</pre>
+</body>
+</html>

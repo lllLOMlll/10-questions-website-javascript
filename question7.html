@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Question 7</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div class="navbar">
+		<a href="index.html">Home</a>
+		<a href="question1.html">Question 1</a>
+		<a href="question2.html">Question 2</a>
+		<a href="question3.html">Question 3</a>
+		<a href="question4.html">Question 4</a>
+		<a href="question5.html">Question 5</a>
+		<a href="question6.html">Question 6</a>
+		<a href="question7.html"><span class="highlight-green">Question 7</span></a>
+		<a href="question8.html">Question 8</a>
+		<a href="question9.html">Question 9</a>
+		<a href="question10.html">Question 10</a>
+	</div>
+
+	<!-- Title -->
+	<h1>Question 7</h1>
+	<h2>Longest Word Finder</h2>
+
+		<br>
+		<br>
+
+		<!-- Image -->
+		<img src="media/computer.png" alt="This is a computer">
+
+		<h3><a href="question8.html">Next question</a></h3>
+
+			<!-- Javascript -->
+			<pre> 
+				<script>
+function findLongestWord() {
+    // Ask for words from user
+    var words = prompt("Please enter words separated by spaces");
+
+    // Split words into an array
+    var wordArray = words.split(' ');
+
+    // If array is empty, return 0
+    if (wordArray.length === 0) {
+        return 0;
+    }
+
+    // Sort the words from least to greatest length
+    wordArray.sort(function(a, b) {
+        return a.length - b.length;
+    });
+
+    // Return the length of the longest word
+    var longestWordLength = wordArray[wordArray.length - 1].length;
+
+    // Create a string of words from shortest to longest
+    var sortedWords = wordArray.join(', ');
+
+    // Display the result
+    alert("The length of the longest word is: " + longestWordLength + "\n\nWords from shortest to longest: \n" + sortedWords);
+}
+
+// Calling the function
+findLongestWord();
+
+
+
+
+				</script>
+			</pre>
+		</body>
+		</html>

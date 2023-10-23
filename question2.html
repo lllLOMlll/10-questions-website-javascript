@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Question 2</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div class="navbar">
+		<a href="index.html">Home</a>
+		<a href="question1.html">Question 1</a>
+		<a href="question2.html"><span class="highlight-green">Question 2</span></a>
+		<a href="question3.html">Question 3</a>
+		<a href="question4.html">Question 4</a>
+		<a href="question5.html">Question 5</a>
+		<a href="question6.html">Question 6</a>
+		<a href="question7.html">Question 7</a>
+		<a href="question8.html">Question 8</a>
+		<a href="question9.html">Question 9</a>
+		<a href="question10.html">Question 10</a>
+	</div>
+
+	<!-- Title -->
+	<h1>Question 2</h1>
+	<h2>Triangle Classifier</h2>
+
+		<br>
+		<br>
+
+		<!-- Image -->
+		<img src="media/computer.png" alt="This is a computer">
+
+		<h3><a href="question3.html">Next question</a></h3>
+
+			<!-- Javascript -->
+			<pre> 
+				<script>
+					function determineTriangleType() {
+   						 // Asking for 3 sides
+						var side1 = prompt("Enter the length of the FIRST side of the triangle", "Length of side 1");
+						var side2 = prompt("Enter the length of the SECOND side of the triangle", "Length of side 2");
+						var side3 = prompt("Enter the length of the THIRD side of the triangle", "Length of side 3");
+
+    					// Validation
+						if (isNaN(side1) || isNaN(side2) || isNaN(side3)) {
+							alert("You provided a wrong input for one of the side of your triangle\n\nSide 1= " + side1 + "\nSide 2= " + side2 + "\nSide 3= " + side3);
+						} else {
+       						// EQUILATERAL (all sides are the same)
+							if (side1 == side2 && side2 == side3){
+								alert("This is a EQUILATERAL triangle\n\nSide 1= " + side1 + "\nSide 2= " + side2 + "\nSide 3= " + side3);
+      						// ISOCELES (2 sides are the same)
+							} else if (side1 == side2 || side2 == side3 || side1 == side3){
+								alert("This is an ISOCELES triangle\n\nSide 1= " + side1 + "\nSide 2= " + side2 + "\nSide 3= " + side3);
+      						// SCALENE (3 differents sides)
+							} else {
+								alert("This is a SCALENE triangle\n\nSide 1= " + side1 + "\nSide 2= " + side2 + "\nSide 3= " + side3);
+							}
+						}
+					}
+
+					// Calling the function
+					determineTriangleType();
+
+				</script>
+			</pre>
+		</body>
+		</html>
